@@ -65,6 +65,7 @@ augroup MyAutoCommands
   autocmd BufRead,BufNewFile *.haml                     setfiletype haml
   autocmd BufRead,BufNewFile *.sass,*.scss              setfiletype sass
   autocmd BufRead,BufNewFile config.ru,Gemfile,Isolate  setfiletype ruby
+  autocmd BufRead,BufNewFile Vagrantfile                setfiletype ruby
   autocmd BufRead,BufNewFile *.liquid,*.mustache        setfiletype liquid
 
   " Ruby files
@@ -96,3 +97,6 @@ augroup END
 " show tabs as blank-padded arrows, trailing spaces as middle-dots
 set list
 set listchars=tab:→\ ,trail:·
+
+" mouse available
+set mouse=a
