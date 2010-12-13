@@ -100,3 +100,7 @@ set listchars=tab:→\ ,trail:·
 
 " mouse available
 set mouse=a
+
+"add some completition
+"debugger
+imap deb<tab> require 'ruby-debug'; Debugger.start; 1
