@@ -1,0 +1,11 @@
+[color]
+  status = auto
+  branch = auto
+  ui = auto
+[user]
+  name = Pablo Dejuan
+  email = pablo.dejuan@gmail.com
+[alias]
+  st = status
+  co = checkout
+  pom = push origin master
