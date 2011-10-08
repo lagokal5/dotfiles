@@ -1,4 +1,5 @@
 [color]
+  diff = auto
   status = auto
   branch = auto
   ui = auto
@@ -8,4 +9,5 @@
 [alias]
   st = status
   co = checkout
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
   pom = push origin master
