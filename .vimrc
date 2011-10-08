@@ -72,13 +72,11 @@ augroup MyAutoCommands
   autocmd FileType ruby,eruby,      set sw=2 ts=2 sts=2 et
   autocmd FileType ruby,eruby,haml  imap <buffer> <CR> <C-R>=RubyEndToken()<CR>
 
-  autocmd FileType ruby             nnoremap <C-D> orequire "ruby-debug"; debugger; ""<Esc>
-
   " HTML/HAML
   autocmd FileType html,haml   set shiftwidth=2 softtabstop=2 expandtab
 
   " Javascript
-  autocmd FileType javascript  set shiftwidth=4 softtabstop=4 expandtab
+  autocmd FileType javascript  set shiftwidth=2 softtabstop=2 expandtab
 
   " CSS
   autocmd FileType sass,css    set shiftwidth=2 softtabstop=2 expandtab
@@ -103,4 +101,4 @@ set mouse=a
 
 "add some completition
 "debugger
-imap deb<tab> require 'ruby-debug'; Debugger.start; 1
+imap deb<tab> require 'ruby-debug'; debugger; 1
