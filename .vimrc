@@ -102,3 +102,6 @@ set mouse=a
 "add some completition
 "debugger
 imap deb<tab> require 'ruby-debug'; debugger; 1
+
+"Colorscheme
+colorscheme wombat
