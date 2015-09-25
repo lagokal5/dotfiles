@@ -1,3 +1,5 @@
+# Shell
+alias md='mkdir'
 # Git
 alias g='git'
 # Rails 3
