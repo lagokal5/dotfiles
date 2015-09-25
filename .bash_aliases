@@ -10,4 +10,8 @@ alias rd='script/rails dbconsole'
 alias b='bundle'
 alias bx='bundle exec'
 alias bi='bundle install'
-alias bep='bundle exec padrino'
+
+#command line tools
+alias md='mkdir'
+alias pd='pushd'
+alias po='popd'
