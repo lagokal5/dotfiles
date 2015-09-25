@@ -103,10 +103,32 @@ fi
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
 
+#Add chromium build tools to path
+#http://dev.chromium.org/developers/how-tos/install-depot-tools
+PATH=/home/pablo/projects/depot_tools:$PATH
+
 #JAVA HOME
-export JAVA_HOME=/usr/lib/jvm/java-6-openjdk/
+export JAVA_HOME=/usr/lib/jvm/java-8-oracle/
+PATH=$PATH:$JAVA_HOME/bin
+#add binaries such as Eclipse
+PATH=$PATH:~/bin
 
 #Command Prompt
 export PS1='\[\033[01;32m\]\h \[\033[01;33m\]\w$(__git_ps1 " \[\033[01;36m\]\
 	(git: %s)")\[\033[01;37m\]\n$\[\033[00m\] '
 
+#Android path
+export ANDROID_HOME=$HOME/adt/sdk
+PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/build-tools:$ANDROID_HOME/platform-tools
+
+PATH=$PATH:/home/pablo/pycharm/bin
+
+#Add genymotion
+PATH=$PATH:/home/pablo/genymotion
+
+export PATH
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
