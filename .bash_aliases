@@ -2,6 +2,9 @@
 alias md='mkdir'
 # Git
 alias g='git'
+# Docker
+alias d='docker'
+
 # Rails 3
 alias rg='script/rails generate'
 alias rs='script/rails server'
