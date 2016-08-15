@@ -112,6 +112,9 @@ export JAVA_HOME=/usr/lib/jvm/java-8-oracle/
 PATH=$PATH:$JAVA_HOME/bin
 #add binaries such as Eclipse
 PATH=$PATH:~/bin
+#add SCALA
+SCALA_HOME=~/scala
+PATH=$PATH:$SCALA_HOME/bin
 
 #Command Prompt
 export PS1='\[\033[01;32m\]\h \[\033[01;33m\]\w$(__git_ps1 " \[\033[01;36m\]\
@@ -126,7 +129,6 @@ PATH=$PATH:/home/pablo/pycharm/bin
 #Add genymotion
 PATH=$PATH:/home/pablo/genymotion
 
-export PATH
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
@@ -139,3 +141,5 @@ source '/home/pablo/google/google-cloud-sdk/path.bash.inc'
 
 # The next line enables shell command completion for gcloud.
 source '/home/pablo/google/google-cloud-sdk/completion.bash.inc'
+
+export PATH
