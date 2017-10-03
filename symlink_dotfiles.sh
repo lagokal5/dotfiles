@@ -1,5 +1,8 @@
 #!/bin/bash
 
+#Install git prompt
+curl -L https://raw.github.com/git/git/master/contrib/completion/git-prompt.sh > ~/.bash_git
+
 # ensure we're on the base of the dotfiles repo
 toplevel="$(git rev-parse --show-toplevel)" && cd "$toplevel" || exit
 

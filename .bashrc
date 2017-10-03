@@ -119,27 +119,10 @@ PATH=$PATH:$SCALA_HOME/bin
 #Command Prompt
 export PS1='\[\033[01;32m\]\h \[\033[01;33m\]\w$(__git_ps1 " \[\033[01;36m\]\
 	(git: %s)")\[\033[01;37m\]\n$\[\033[00m\] '
-
-#Android path
-export ANDROID_HOME=$HOME/adt/sdk
-PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/build-tools:$ANDROID_HOME/platform-tools
-
-PATH=$PATH:/home/pablo/pycharm/bin
-
-#Add genymotion
-PATH=$PATH:/home/pablo/genymotion
-
-
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+source ~/.bash_git
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 export NODE_PATH=/usr/lib/nodejs:/usr/lib/node_modules:/usr/share/javascript:/usr/local/lib/node_modules
-
-# The next line updates PATH for the Google Cloud SDK.
-source '/home/pablo/google/google-cloud-sdk/path.bash.inc'
-
-# The next line enables shell command completion for gcloud.
-source '/home/pablo/google/google-cloud-sdk/completion.bash.inc'
 
 export PATH
