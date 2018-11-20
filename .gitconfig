@@ -4,12 +4,31 @@
   branch = auto
   ui = auto
 [user]
-  name = Pablo Dejuan
-  email = pablo.dejuan@gmail.com
+	name = Pablo Dejuan
+	email = pablo.dejuan@gmail.com
 [alias]
-  st = status
+  b = branch
   co = checkout
+  dc = diff --cached
   lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
-  pom = push origin master
+  pp = pull --prune --rebase
+  rbm = rebase master
+  si = status --ignored
+  st = status -s -b
 [core]
-	editor = vim
+  editor = vim
+  whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
+
+[url "git@github.com:"]
+  insteadOf = https://github.com/
+# git large file storage
+# https://github.com/git-lfs/git-lfs
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+[gpg]
+	program = gpg
+[commit]
+	gpgsign = false
