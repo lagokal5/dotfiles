@@ -5,7 +5,8 @@
   ui = auto
 [user]
 	name = Pablo Dejuan
-	email = pablo.dejuan@gmail.com
+	email = pablo@gocardless.com
+  signingkey = 66AA620299C2C7F0
 [alias]
   b = branch
   co = checkout
@@ -31,4 +32,4 @@
 [gpg]
 	program = gpg
 [commit]
-	gpgsign = false
+	gpgsign = true
