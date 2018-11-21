@@ -1,6 +1,6 @@
 #Public variables
-set -x TEAM cep
-set -x GITHUB_URL http://github.bus.zalan.do
+set -x TEAM none
+set -x GITHUB_URL http://github.com/pdjota
 set -x AWS_DEFAULT_REGION eu-central-1
 
 # Shell
@@ -10,17 +10,11 @@ function md
 end
 
 function ll
-    ls -las $argv
+    ls -last $argv
 end
 
 # Docker
 alias d='docker'
-
-### NodeJS
-#include npm bin into the path for the current session
-alias npmbin='set PATH $PATH (npm bin)'
-#Include node 8.1 to path, TODO should be done automatically
-set -x PATH /usr/local/Cellar/node/8.3.0_1/bin/ $PATH
 
 #### Git
 # alias g='git'
@@ -40,3 +34,14 @@ alias gp='g push --set-upstream origin (g rev-parse --abbrev-ref HEAD)'
 
 #create a pull request for current branch for the team to review, when using same repo for branches
 alias pr='open -a Google\ Chrome "$GITHUB_URL/$TEAM/"(basename $PWD)"/compare/master..."(g rev-parse --abbrev-ref HEAD)'
+
+### Override default prompt function adding git branch/status
+function fish_prompt
+    set_color blue;
+    printf '%s ' (whoami);
+    set_color green;
+    printf '%s' (prompt_pwd);
+    set_color yellow;
+    printf '%s> ' (__fish_git_prompt);
+    set_color normal;
+end
