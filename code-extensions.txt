@@ -1,0 +1,6 @@
+eamodio.gitlens
+GitHub.vscode-pull-request-github
+KnisterPeter.vscode-github
+mikestead.dotenv
+PeterJausovec.vscode-docker
+Tyriar.sort-lines
