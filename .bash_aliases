@@ -23,6 +23,7 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 alias md='mkdir'
 # Git
 alias g='git'
+alias gp='g push --set-upstream origin $(g rev-parse --abbrev-ref HEAD)'
 # Docker
 alias d='docker'
 
