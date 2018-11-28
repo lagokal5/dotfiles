@@ -1,6 +1,12 @@
+bung87.rails
+bung87.vscode-gemfile
 eamodio.gitlens
 GitHub.vscode-pull-request-github
+jemmyw.rails-fast-nav
 KnisterPeter.vscode-github
 mikestead.dotenv
 PeterJausovec.vscode-docker
+shanehofstetter.rails-i18n
+sianglim.slim
+skyapps.fish-vscode
 Tyriar.sort-lines
