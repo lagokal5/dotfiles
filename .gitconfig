@@ -6,7 +6,7 @@
 [user]
 	name = Pablo Dejuan
 	email = pablo@gocardless.com
-  signingkey = 66AA620299C2C7F0
+	signingkey = 1960792370BE8BE977265267367DFB27B74DCCC5
 [alias]
   b = branch
   co = checkout
@@ -29,7 +29,5 @@
 	required = true
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
-[gpg]
-	program = gpg
 [commit]
 	gpgsign = false
