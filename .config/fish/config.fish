@@ -1,6 +1,6 @@
 #Public variables
-set -x TEAM none
-set -x GITHUB_URL http://github.com/pdjota
+set -x TEAM resolving
+set -x GITHUB_URL http://github.com
 set -x AWS_DEFAULT_REGION eu-central-1
 
 # Shell
