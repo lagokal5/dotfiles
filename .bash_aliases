@@ -27,11 +27,10 @@ alias gp='g push --set-upstream origin $(g rev-parse --abbrev-ref HEAD)'
 # Docker
 alias d='docker'
 
-# Rails 3
-alias rg='script/rails generate'
-alias rs='script/rails server'
-alias rc='script/rails console'
-alias rd='script/rails dbconsole'
+# Rails aliases
+alias rs='bin/rails server'
+alias rc='bin/rails console'
+alias rdb='bin/rails dbconsole'
 
 # Bundler
 alias b='bundle'
