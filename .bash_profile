@@ -16,4 +16,12 @@ fi
 
 export EDITOR=vim
 
+#MYSQL keg extension
+export PATH="/usr/local/opt/mysql-client/bin:$PATH"
+#compilers
+export LDFLAGS="-L/usr/local/opt/mysql-client/lib"
+export CPPFLAGS="-I/usr/local/opt/mysql-client/include"
+#For pkg-config to find mysql-client you may need to set:
+export PKG_CONFIG_PATH="/usr/local/opt/mysql-client/lib/pkgconfig"
+
 export PATH="/usr/local/sbin:$PATH"
