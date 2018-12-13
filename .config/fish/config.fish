@@ -13,7 +13,7 @@ function ll
     ls -last $argv
 end
 
-# Docker
+#### Docker
 alias d='docker'
 
 #### Git
@@ -21,6 +21,11 @@ alias d='docker'
 function g
     git $argv
 end
+
+#### Bundler
+alias b='bundle'
+alias bx='bundle exec'
+alias bi='bundle install'
 
 #Default Origin Branch name
 set -x ORIGIN origin
