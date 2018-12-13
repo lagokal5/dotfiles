@@ -1,3 +1,5 @@
 .bash_credentials
 .fish_credentials
+.config/fish/fishd.*
+.config/hub
 pablo
