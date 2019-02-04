@@ -2,7 +2,9 @@
 # export GITHUB_DEPLOYMENT_TOKEN=
 # export PROJECT_DIR=
 # export GITHUB_USERNAME=
-[ -z ~/.bash_credentials ] && source ~/.bash_credentials
+if [ -f ~/.bash_credentials ]; then
+    source ~/.bash_credentials
+fi
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

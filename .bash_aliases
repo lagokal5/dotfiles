@@ -26,6 +26,7 @@ alias g='git'
 alias gp='g push --set-upstream origin $(g rev-parse --abbrev-ref HEAD)'
 # Docker
 alias d='docker'
+alias doc='docker-compose'
 
 # Rails aliases
 alias rs='bin/rails server'

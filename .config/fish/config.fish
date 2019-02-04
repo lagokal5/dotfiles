@@ -38,7 +38,7 @@ alias delete_merged='g co master; g branch --merged | grep -v "\*" | xargs -n 1 
 alias gp='g push --set-upstream origin (g rev-parse --abbrev-ref HEAD)'
 
 #create a pull request for current branch for the team to review, when using same repo for branches
-alias pr='open -a Google\ Chrome "$GITHUB_URL/$TEAM/"(basename $PWD)"/compare/master..."(g rev-parse --abbrev-ref HEAD)'
+alias pr='open -a Google\ Chrome "$GITHUB_URL/$TEAM/"(basename $PWD)"/compare/staging..."(g rev-parse --abbrev-ref HEAD)'
 
 ### Override default prompt function adding git branch/status
 function fish_prompt
