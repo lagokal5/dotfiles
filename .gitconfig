@@ -10,6 +10,7 @@
 [alias]
   b = branch
   co = checkout
+  can = commit --amend --no-edit
   dc = diff --cached
   lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
   pp = pull --prune --rebase
@@ -20,6 +21,7 @@
 [core]
   editor = vim
   whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
+	excludesfile = /Users/pablodejuan/.gitignore_global
 
 [url "git@github.com:"]
   insteadOf = https://github.com/
