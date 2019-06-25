@@ -27,6 +27,7 @@ alias gp='g push --set-upstream origin $(g rev-parse --abbrev-ref HEAD)'
 # Docker
 alias d='docker'
 alias doc='docker-compose'
+alias docpry='docker attach $(docker ps | grep -e "->3000" | cut -f 1 -d " ")'
 
 # Rails aliases
 alias rs='bin/rails server'
