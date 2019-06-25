@@ -81,9 +81,16 @@ fi
 
 source ~/.bash_profile
 
+#Terraform Workspace
+tf_workspace() {
+	if [ -a ".terraform" ]; then
+	echo [`terraform workspace show 2> /dev/null`]
+	fi
+}
+
 #Command Prompt
-export PS1='\[\033[01;32m\]\h \[\033[01;33m\]\w$(__git_ps1 " \[\033[01;36m\]\
-	(git: %s)")\[\033[01;37m\]\n$\[\033[00m\] '
+export PS1='\[\033[01;32m\]\h \[\033[01;33m\]\w$(__git_ps1 " \[\033[01;36m\]$(tf_workspace)\
+(git: %s)")\[\033[01;37m\]\n$\[\033[00m\] '
 source ~/.bash_git
 
 #Node version manager
