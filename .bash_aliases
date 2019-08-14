@@ -2,9 +2,6 @@
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     alias ls='ls --color=auto'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
-
     alias grep='grep --color=auto'
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
@@ -15,31 +12,24 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
-# Add an "alert" alias for long running commands.  Use like so:
-#   sleep 10; alert
-alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
-
-# Shell
-alias md='mkdir'
 # Git
 alias g='git'
+#use git completion with `g` alias
+complete -F _git g
 alias gp='g push --set-upstream origin $(g rev-parse --abbrev-ref HEAD)'
+#delete merged branches from this repository, (exclude master)
+alias delete_merged='git checkout master; git branch --merged | grep -v "\*" | xargs -n 1 git branch -d'
+
 # Docker
 alias d='docker'
 alias doc='docker-compose'
 alias docpry='docker attach $(docker ps | grep -e "->3000" | cut -f 1 -d " ")'
 
-# Rails aliases
-alias rs='bin/rails server'
-alias rc='bin/rails console'
-alias rdb='bin/rails dbconsole'
-
 # Bundler
-alias b='bundle'
 alias bx='bundle exec'
 alias bi='bundle install'
 
 #command line tools
-alias md='mkdir'
+alias md='mkdir -p'
 alias pd='pushd'
 alias po='popd'

@@ -23,22 +23,21 @@ function g
 end
 
 #### Bundler
-alias b='bundle'
 alias bx='bundle exec'
 alias bi='bundle install'
 
 #Default Origin Branch name
 set -x ORIGIN origin
 
-#delete merged branches from this repository
-alias delete_merged='g co master; g branch --merged | grep -v "\*" | xargs -n 1 g branch -d'
+#delete merged branches from this repository, (exclude master)
+alias delete_merged='git checkout master; git branch --merged | grep -v "\*" | xargs -n 1 git branch -d'
 
 #create brand new remote branch of current branch
 # e.g.: git push --set-upstream origin feature/PIZ-1743-ux-improvements
 alias gp='g push --set-upstream origin (g rev-parse --abbrev-ref HEAD)'
 
 #create a pull request for current branch for the team to review, when using same repo for branches
-alias pr='open -a Google\ Chrome "$GITHUB_URL/$TEAM/"(basename $PWD)"/compare/staging..."(g rev-parse --abbrev-ref HEAD)'
+alias pr='open -a Google\ Chrome "$GITHUB_URL/$TEAM/"(basename $PWD)"/compare/master..."(g rev-parse --abbrev-ref HEAD)'
 
 ### Override default prompt function adding git branch/status
 function fish_prompt
