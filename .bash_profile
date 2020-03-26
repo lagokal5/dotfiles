@@ -29,3 +29,5 @@ export PKG_CONFIG_PATH="/usr/local/opt/mysql-client/lib/pkgconfig"
 export PATH="/usr/local/sbin:$PATH"
 
 export AWS_DEFAULT_REGION=eu-west-1
+
+export PATH="$HOME/.cargo/bin:$PATH"
