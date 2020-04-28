@@ -5,9 +5,37 @@
   ui = auto
 [user]
 	name = Pablo Dejuan
-	email = pablo@pablo.pm
-	signingkey = ECFA9741F795494FC4354CD975A839118E02E58C
+	email = pablo.dejuan@simplybusiness.co.uk
+	# signingkey =
+[color]
+  ui = auto
+[github]
+  organization = simplybusiness
+[diff "postcodedump"]
+  textconv = postcode_dump.sh
+[diff "insurerdocs"]
+  textconv = insurer_docs.sh
+[filter "media"]
+  required = true
+  clean = git media clean %f
+  smudge = git media smudge %f
+[diff "gpg"]
+  textconv = gpg --quiet --no-tty --decrypt
 [alias]
+  co = checkout
+  ci = commit
+  st = status
+  br = branch
+  ls = ls-files
+  wc = whatchanged
+  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+  type = cat-file -t
+  dump = cat-file -p
+  last = log -n 1 HEAD
+  wdiff = diff --word-diff
+  unstage = reset HEAD --
+  contributors = shortlog -s -n
+  acan = commit -a --amend --no-edit
   b = branch
   co = checkout
   can = commit --amend --no-edit
@@ -33,4 +61,4 @@
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 [commit]
-	gpgsign = true
+	gpgsign = false
